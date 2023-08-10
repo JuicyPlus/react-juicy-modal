@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "react-juicy-modal",
+  "name": "react-juicy-modal",
   "icons": [
     {
       "src": "favicon.ico",

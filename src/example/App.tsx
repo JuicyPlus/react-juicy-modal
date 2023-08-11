@@ -15,8 +15,12 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <div onClick={() => setRouter("home")}>Home</div>
-        <div onClick={() => setRouter("about")}>About</div>
+        <div className="App-header-menu" onClick={() => setRouter("home")}>
+          Home
+        </div>
+        <div className="App-header-menu" onClick={() => setRouter("about")}>
+          About
+        </div>
       </div>
       <div className="App-body">
         {router === "home" && <Home />}

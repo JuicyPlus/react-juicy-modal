@@ -5,17 +5,14 @@ export type ButtonData = {
   onClick: () => void;
 };
 
-const Modal = ({
-  buttons,
-  title,
-  content,
-  onClose,
-}: {
+export type ModalProps = {
   buttons: Array<ButtonData>;
   title: string;
   content: string;
   onClose: () => void;
-}) => {
+};
+
+const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
   return (
     <div
       style={{

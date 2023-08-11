@@ -24,7 +24,6 @@
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\""
   },
-
   "browserslist": {
     "production": [
       ">0.2%",
@@ -50,12 +49,15 @@
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard-with-typescript": "^37.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-storybook": "^0.6.13",
+    "prettier": "^3.0.1",
     "prop-types": "^15.8.1",
     "storybook": "^7.2.2",
     "webpack": "^5.88.2"

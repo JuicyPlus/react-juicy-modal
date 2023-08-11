@@ -2,17 +2,23 @@ import React from "react";
 import { createPortal } from "react-dom";
 import Modal from "../components/Modal";
 
-const useModal = ({ rootId }: { rootId: string }) => {
+type UseModalProps = {
+  /** Modal의 실제 Render가 이루어지는 ModalRoot의 element id */
+  rootId: string;
+};
+
+const useModal = ({ rootId }: UseModalProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const openModal = () => setIsOpen(true);
   const closeModal = () => setIsOpen(false);
 
-  // TODO : Modal Root 부분을 임의로 지정할 수 있도록 함.
-  // const ModalRoot = () => {
-  //   return <div id={rootId} className="render-here"></div>;
-  // };
+  /** Modal이 실제로 Render 되는 위치를 지정하기 위한 컴포넌트 */
+  const ModalRoot = () => {
+    return <div id={rootId} className="render-here"></div>;
+  };
 
+  /** Modal을 선언하는 부분 */
   const JuicyModal = ({
     buttons,
     title,
@@ -25,9 +31,7 @@ const useModal = ({ rootId }: { rootId: string }) => {
     title: string;
     content: string;
   }) => {
-    // TODO: modal Root의 위치를 따로 지정하는 방법 제공
-    // modalRoot = document.getElementById(rootId);
-    const modalRoot = document.body;
+    const modalRoot = document.getElementById(rootId);
 
     if (!modalRoot) {
       console.log("no modal root");
@@ -51,7 +55,7 @@ const useModal = ({ rootId }: { rootId: string }) => {
     openModal,
     closeModal,
     JuicyModal,
-    //ModalRoot,
+    ModalRoot,
   };
 };
 

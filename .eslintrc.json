@@ -21,7 +21,8 @@
         "prettier"
     ],
     "rules": {
-        "@typescript-eslint/triple-slash-reference": "off"
+        "@typescript-eslint/triple-slash-reference": "off",
+        "prettier/prettier": "error"
     },
     "settings": {
         "react": {

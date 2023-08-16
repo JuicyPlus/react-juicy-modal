@@ -6,10 +6,10 @@ export interface ButtonData {
 }
 
 export interface ModalProps {
-  buttons: ButtonData[]
-  title: string
-  content: string
-  onClose: () => void
+  buttons?: ButtonData[]
+  title?: string
+  content?: string
+  onClose?: () => void
 }
 
 const Modal: React.FC<ModalProps> = ({ buttons, title, content, onClose }) => {
@@ -54,7 +54,7 @@ const Modal: React.FC<ModalProps> = ({ buttons, title, content, onClose }) => {
           {content}
         </div>
         <div className="modal-footer">
-          {buttons.map(({ label, onClick }) => (
+          {buttons?.map(({ label, onClick }) => (
             <button
               style={{
                 padding: '10px',

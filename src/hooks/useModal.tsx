@@ -33,14 +33,8 @@ const useModal = ({ rootId }: UseModalProps): UseModalReturn => {
   const JuicyModal: React.FC<ModalProps> = ({
     buttons,
     title,
-    content
-  }: {
-    buttons: Array<{
-      label: string
-      onClick: () => void
-    }>
-    title: string
-    content: string
+    content,
+    onClose
   }) => {
     const modalRoot = document.getElementById(rootId)
 
@@ -55,7 +49,7 @@ const useModal = ({ rootId }: UseModalProps): UseModalReturn => {
         title={title}
         content={content}
         buttons={buttons}
-        onClose={closeModal}
+        onClose={onClose ?? closeModal}
       />
     )
 

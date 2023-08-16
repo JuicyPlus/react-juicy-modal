@@ -1,7 +1,12 @@
 {
-  "name": "react-juicy-modal",
-  "version": "0.0.1",
+  "name": "@juicyPlus/react-juicy-modal",
+  "version": "0.0.2",
   "private": false,
+  "description": "A user-friendly modal library with juicy colors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juicyPlus/react-juicy-modal"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",

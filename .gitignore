@@ -6,7 +6,7 @@
 .pnp.js
 
 # npm
-.npmrc
+# .npmrc
 
 # testing
 /coverage

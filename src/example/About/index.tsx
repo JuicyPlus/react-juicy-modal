@@ -1,10 +1,10 @@
-import React from "react";
-import useModal from "../../hooks/useModal";
+import React from 'react'
+import useModal from '../../hooks/useModal'
 
 const About: React.FC = () => {
   const { JuicyModal, closeModal, openModal } = useModal({
-    rootId: "modal-root",
-  });
+    rootId: 'modal-root'
+  })
 
   return (
     <div className="About">
@@ -15,20 +15,20 @@ const About: React.FC = () => {
         content="Modal from About"
         buttons={[
           {
-            label: "Confirm",
+            label: 'Confirm',
             onClick: () => {
-              closeModal();
-              alert("confirm");
-            },
+              closeModal()
+              alert('confirm')
+            }
           },
           {
-            label: "Close",
-            onClick: closeModal,
-          },
+            label: 'Close',
+            onClick: closeModal
+          }
         ]}
       />
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

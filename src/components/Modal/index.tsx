@@ -12,7 +12,7 @@ export interface ModalProps {
   onClose: () => void
 }
 
-const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
+const Modal: React.FC<ModalProps> = ({ buttons, title, content, onClose }) => {
   return (
     <div
       style={{

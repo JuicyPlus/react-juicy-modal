@@ -4,7 +4,7 @@ import Home from './Home'
 import About from './About'
 import useModal from '../hooks/useModal'
 
-const App = () => {
+const App: React.FC = () => {
   const [router, setRouter] = React.useState('home')
 
   // useModal에서 제공하는 ModalRoot로 모달이 Render될 부분을 지정합니다.

@@ -1,29 +1,36 @@
 import React from 'react'
 import { createPortal } from 'react-dom'
 import Modal from '../components/Modal'
+import type { ModalProps } from '../components/Modal'
 
 interface UseModalProps {
   /** Modal의 실제 Render가 이루어지는 ModalRoot의 element id */
   rootId: string
 }
+interface UseModalReturn {
+  openModal: () => void
+  closeModal: () => void
+  JuicyModal: React.FC<ModalProps>
+  ModalRoot: React.FC
+}
 
-const useModal = ({ rootId }: UseModalProps) => {
+const useModal = ({ rootId }: UseModalProps): UseModalReturn => {
   const [isOpen, setIsOpen] = React.useState(false)
 
-  const openModal = () => {
+  const openModal: () => void = () => {
     setIsOpen(true)
   }
-  const closeModal = () => {
+  const closeModal: () => void = () => {
     setIsOpen(false)
   }
 
   /** Modal이 실제로 Render 되는 위치를 지정하기 위한 컴포넌트 */
-  const ModalRoot = () => {
+  const ModalRoot: React.FC = () => {
     return <div id={rootId} className="render-here"></div>
   }
 
   /** Modal을 선언하는 부분 */
-  const JuicyModal = ({
+  const JuicyModal: React.FC<ModalProps> = ({
     buttons,
     title,
     content

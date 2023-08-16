@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react'
 
-export type ButtonData = {
-  label: string;
-  onClick: () => void;
-};
+export interface ButtonData {
+  label: string
+  onClick: () => void
+}
 
-export type ModalProps = {
-  buttons: Array<ButtonData>;
-  title: string;
-  content: string;
-  onClose: () => void;
-};
+export interface ModalProps {
+  buttons: ButtonData[]
+  title: string
+  content: string
+  onClose: () => void
+}
 
 const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
   return (
     <div
       style={{
         // center of the screen
-        position: "absolute",
-        padding: "20px",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        backgroundColor: "rgba(255,255,255,0.8)",
+        position: 'absolute',
+        padding: '20px',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'rgba(255,255,255,0.8)'
       }}
       className="modal"
     >
@@ -30,11 +30,11 @@ const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
         <div className="modal-header">
           <div
             style={{
-              position: "absolute",
-              top: "0",
-              right: "0",
-              padding: "10px",
-              cursor: "pointer",
+              position: 'absolute',
+              top: '0',
+              right: '0',
+              padding: '10px',
+              cursor: 'pointer'
             }}
             className="close"
             onClick={onClose}
@@ -45,9 +45,9 @@ const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
         </div>
         <div
           style={{
-            padding: "10px",
-            height: "50px",
-            overflowY: "auto",
+            padding: '10px',
+            height: '50px',
+            overflowY: 'auto'
           }}
           className="modal-body"
         >
@@ -57,9 +57,9 @@ const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
           {buttons.map(({ label, onClick }) => (
             <button
               style={{
-                padding: "10px",
-                margin: "10px",
-                cursor: "pointer",
+                padding: '10px',
+                margin: '10px',
+                cursor: 'pointer'
               }}
               key={label}
               onClick={onClick}
@@ -70,7 +70,7 @@ const Modal = ({ buttons, title, content, onClose }: ModalProps) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

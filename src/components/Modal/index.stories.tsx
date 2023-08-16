@@ -1,42 +1,42 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
 
-import Modal from "./index";
+import Modal from './index'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: "components/Modal",
+  title: 'components/Modal',
   component: Modal,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "centered",
-  },
+    layout: 'centered'
+  }
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
-} satisfies Meta<typeof Modal>;
+} satisfies Meta<typeof Modal>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Common: Story = {
   args: {
-    title: "확인하시겠습니까?",
+    title: '확인하시겠습니까?',
     buttons: [
       {
-        label: "확인",
+        label: '확인',
         onClick: () => {
-          console.log("OK");
-        },
+          console.log('OK')
+        }
       },
       {
-        label: "닫기",
+        label: '닫기',
         onClick: () => {
-          console.log("Close");
-        },
-      },
+          console.log('Close')
+        }
+      }
     ],
-    content: "변경사항을 적용합니다!",
+    content: '변경사항을 적용합니다!',
     onClose: () => {
-      console.log("onClose");
-    },
-  },
-};
+      console.log('onClose')
+    }
+  }
+}

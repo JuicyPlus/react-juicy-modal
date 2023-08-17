@@ -28,7 +28,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\"",
-    "prepare": "husky install"
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
   },
   "browserslist": {
     "production": [
@@ -48,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
     "@storybook/addon-essentials": "^7.2.2",
     "@storybook/addon-interactions": "^7.2.2",
     "@storybook/addon-links": "^7.2.2",

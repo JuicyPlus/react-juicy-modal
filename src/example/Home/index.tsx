@@ -1,5 +1,5 @@
 import React from 'react'
-import useModal from '../../hooks/useModal'
+import useModal from '../../lib/hooks/useModal'
 
 const Home: React.FC = () => {
   const { JuicyModal, closeModal, openModal } = useModal({

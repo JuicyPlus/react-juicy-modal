@@ -1,6 +1,6 @@
 {
   "name": "@juicy-plus/react-juicy-modal",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": false,
   "description": "A user-friendly modal library with juicy colors",
   "repository": {

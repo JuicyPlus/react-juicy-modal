@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "description": "A user-friendly modal library with juicy colors",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/juicyPlus/react-juicy-modal"

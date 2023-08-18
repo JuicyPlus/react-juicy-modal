@@ -2,7 +2,7 @@ name: Deploy Gatsby site to GitHub Pages
 
 on:
   push:
-    branches: ["feature/storybook"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:

@@ -1,9 +1,10 @@
 {
   "name": "@juicy-plus/react-juicy-modal",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "private": false,
   "description": "A user-friendly modal library with juicy colors",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/juicyPlus/react-juicy-modal"
@@ -29,7 +30,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\"",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files --extensions \".ts,.tsx,.js,.jsx\""
+    "compile": "rm -rf dist && mkdir dist && tsc"
   },
   "babel": {
     "presets": [

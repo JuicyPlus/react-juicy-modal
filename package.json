@@ -30,7 +30,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\"",
-    "compile": "rm -rf dist && mkdir dist && tsc"
+    "compile": "rm -rf dist && mkdir dist && tsc",
+    "publish:npm" : "yarn publish --access public"
   },
   "babel": {
     "presets": [

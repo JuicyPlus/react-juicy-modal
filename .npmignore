@@ -5,3 +5,4 @@ tsconfig.json
 build
 .github
 .husky
+.storybook

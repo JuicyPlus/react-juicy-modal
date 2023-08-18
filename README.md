@@ -1,5 +1,5 @@
 <div align="center">
-<img src="image-1.png" width="150px" height="150px" title="Github_Logo"/>
+  <img src="logo/logo-192.png" width="150px" height="150px" title="Github_Logo"/>
 </div>
 
 Introducing React-Juicy-Modal: Ushering in a new era of modal interactions in React applications with fresh, fruity designs 🍊🍇🍓

@@ -42,3 +42,4 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           publish_dir: ./storybook
           publish_branch: gh-pages
+          destination_dir: story

@@ -31,10 +31,14 @@ jobs:
           yarn install
           yarn build-storybook
 
+      - name: Move files to storybook folder
+        run: |
+          mkdir -p storybook
+          mv storybook-static/* storybook/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./storybook
           publish_branch: gh-pages
-          publish_dir_prefix: "storybook"

@@ -1,7 +1,14 @@
 {
-  "name": "react-juicy-modal",
-  "version": "0.0.1",
+  "name": "@juicy-plus/react-juicy-modal",
+  "version": "0.1.5",
   "private": false,
+  "description": "A user-friendly modal library with juicy colors",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juicyPlus/react-juicy-modal"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -23,7 +30,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\"",
-    "prepare": "husky install"
+    "compile": "rm -rf dist && mkdir dist && tsc",
+    "publish:npm": "yarn publish --access public"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
   },
   "browserslist": {
     "production": [
@@ -43,6 +57,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
     "@storybook/addon-essentials": "^7.2.2",
     "@storybook/addon-interactions": "^7.2.2",
     "@storybook/addon-links": "^7.2.2",

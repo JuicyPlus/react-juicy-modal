@@ -1,0 +1,8 @@
+node_modules
+src
+public
+tsconfig.json
+build
+.github
+.husky
+.storybook

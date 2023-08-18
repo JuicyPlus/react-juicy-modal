@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Home from './Home'
 import About from './About'
-import useModal from '../hooks/useModal'
+import useModal from '../lib/hooks/useModal'
 
 const App: React.FC = () => {
   const [router, setRouter] = React.useState('home')

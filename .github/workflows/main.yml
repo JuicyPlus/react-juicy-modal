@@ -28,6 +28,7 @@ jobs:
 
       - name: Build storybook
         run: |
+          yarn install
           yarn build-storybook
           mv ./storybook-static 
 

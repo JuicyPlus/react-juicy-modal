@@ -1,22 +1,11 @@
 # Contribution guidelines
 
-### When reporting a bug, please be sure to include the following:
+[한국어](ko/CONTRBUTING_ko.md)
 
-- [ ] A descriptive title
-- [ ] What version of `react-juicy-modal` you're using
-- [ ] What packages or other dependencies you're using
-- [ ] The behavior you expect to see, and the actual behavior
+You can also become a contributor to our project.🙂</br>
+Please follow the instructions below.
 
-### When you open an issue for a feature request, please add as much detail as possible:
-
-- [ ] A descriptive title
-- [ ] A description of the problem you're trying to solve, including _why_ you think this is a problem
-- [ ] An overview of the suggested solution
-- [ ] If the feature changes current behavior, reasons why your solution is better
-
-### Please note by far the quickest way to get a new feature is to file a Pull Request.
-
-### Commit
+### 🍏 Steps to write a commit message.
 
 If your patch changes the API or fixes a bug please use one of the following prefixes in your commit subject:
 
@@ -26,8 +15,8 @@ If your patch changes the API or fixes a bug please use one of the following pre
 
 Describe the work that was done, not what problem there is.
 
-- `fix:close button is not working`(X)
-- `fix:rename close button’s prop name` (O)
+- `fix: close button is not working`(X)
+- `fix: rename close button’s prop name`(O)
 
 Follow the rules presented in 🔗Conventional Commits:
 
@@ -35,8 +24,7 @@ Follow the rules presented in 🔗Conventional Commits:
 - Commits of the type feat: introduce a new feature to the codebase ([MINOR](http://semver.org/#summary) in semantic versioning).
 - Commits with BREAKING CHANGE: introduce changes that break the API ([MAJOR](http://semver.org/#summary) in semantic versioning).
 
-  - By adding ! after type/scope
-  - Or including BREAKING CHANGE: in the footer.
+  - By adding ! after type/scope Or including BREAKING CHANGE: in the footer.
   - Examples:
 
     ```
@@ -54,18 +42,26 @@ Follow the rules presented in 🔗Conventional Commits:
   - A scope may be provided to give additional context and is enclosed in parentheses.
   - Example: feat(parser): add ability to parse arrays
 
-### Branch
+### 🍉 Template
 
-Use the main / feature branches.
+- [ISSUES](.github/ISSUE_TEMPLATE/bug_report.md)
+- [PULL REQUEST](.github/PULL_REQUEST_TEMPLATE.md)
+
+### 🍅 Branch
+
+Use the `main / feature` branches.</br>
 For the feature branch, use an English lowercase name with hyphens (-) for specific expression.
 
+```
 Example: feature/what-is-this-branch
+```
 
 (Hyphens are based on spaces in the description.)
 
 Consider the need for development and hotfix branches later.
 
-### Suggestions
+### 🍇 Suggestions
 
-The team's contribution guide might not be perfect yet.
+The team's `contribution guide` might not be perfect yet.
+
 Please feel free to suggest improvements via ISSUES :)

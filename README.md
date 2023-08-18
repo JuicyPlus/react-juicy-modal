@@ -29,11 +29,9 @@ npm install @juicy-plus/react-juicy-modal
 
 you can also use other package managers such as yarn, pnpm
 
-### ModalRoot
+### 1. Use ModalRoot at the root.
 
-Use the component `ModalRoot` where the modal will actually be rendered.
-
-For example, at the bottom of the `App.tsx`.
+Use the component `ModalRoot` where the modal will actually be rendered.(Mostly would be at the root of your app)
 
 Modal and ModalRoot must originate from useModal with the same id.
 
@@ -54,7 +52,7 @@ const App = () => {
 }
 ```
 
-### 2. JuicyModal
+### 2. Use JuicyModal to decalre modal.
 
 You can use `JuicyModal`, `openModal`, `closeModal`, etc. in the part where modal content is declared.
 

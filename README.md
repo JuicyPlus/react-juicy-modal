@@ -21,24 +21,24 @@ _Features:_
 
 ### 1. Install
 
-You can install package by the conmand below
+You can install package by the conmand below.
 
 ```bash
 npm install @juicy-plus/react-juicy-modal
 ```
 
-you can also use other package managers such as yarn, pnpm
+You can also use other package managers such as yarn, pnpm
 
 ### 2. Use ModalRoot at the root.
 
-Use the component `ModalRoot` where the modal will actually be rendered.(Mostly would be at the root of your app)
+`ModalRoot` is the component where the modal will actually be rendered.(Mostly it would be at the root of your app)
 
-Modal and ModalRoot must originate from useModal with the same id.
+Modal and `ModalRoot` must be originated from `useJuicyModal` with the same `rootId`.
 
-Then from the modal anywhere in the component, it will be rendered in the ModalRoot.
+Then the modal from any component in the app, it will be rendered in the `ModalRoot`.
 
 ```typescript
-import useJuicyModal from '@juicy-plus/react-juicy-modal'
+import { useJuicyModal } from '@juicy-plus/react-juicy-modal'
 
 const App = () => {
   const { ModalRoot } = useJuicyModal({ rootId: 'modal-root' })
@@ -59,7 +59,7 @@ You can use `JuicyModal`, `openModal`, `closeModal`, etc. in the part where moda
 There must be a `ModalRoot` with matching rootId in the app.
 
 ```typescript
-import useJuicyModal from '@juicy-plus/react-juicy-modal'
+import { useJuicyModal } from '@juicy-plus/react-juicy-modal'
 
 const About = () => {
   const { JuicyModal, closeModal, openModal } = useJuicyModal({
@@ -94,7 +94,7 @@ const About = () => {
 
 ### 4. Example
 
-You can run example by the command below, or just look at the source codes in the directory `exmaple`,
+You can run example by the command below, or just look at the source codes in the directory `exmaple`.
 
 ```bash
 yarn
@@ -103,7 +103,7 @@ yarn example
 
 ### 5. Storybook
 
-try the command below to start storybook
+Try the command below to start storybook.
 
 ```bash
 yarn storybook

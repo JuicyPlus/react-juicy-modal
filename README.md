@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="logo/logo-192.png" width="150px" height="150px" title="Github_Logo"/>
+  <img src="logo/logo-192.png" width="150px" height="150px" alt="logo of Juicy Plus"/>
 </div>
 
 Introducing React-Juicy-Modal: Ushering in a new era of modal interactions in React applications with fresh, fruity designs 🍊🍇🍓
 
 <div align="center">
-  <img src="ezgif.com-crop.gif" width="500px" height="300px"/>
+  <img src="demo.gif" width="450px" height="244px" alt="demonstration of react-juicy-modal"/>
 </div>
 <br/><br/>
 

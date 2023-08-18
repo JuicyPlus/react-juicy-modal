@@ -35,4 +35,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_dir: ./storybook/storybook-static
+          publish_dir: ./storybook-static
+          publish_dir_prefix: "storybook"

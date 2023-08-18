@@ -28,7 +28,7 @@ jobs:
 
       - name: Build storybook
         run: |
-          yarn run build-storybook
+          yarn build-storybook
           mv ./storybook-static 
 
       - name: Deploy to GitHub Pages

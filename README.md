@@ -17,9 +17,9 @@ _Features:_
 
 🌟 Fruity Fresh Design: Say farewell to dull, generic modal designs. React Juicy Modal brings you a wide array of visually captivating modal styles inspired by the vibrant world of fruits. From zesty oranges to luscious grapes, each modal variant breathes life into your user interactions.
 
-## Getting Started🚀
+## 🚀 Getting Started
 
-### Install
+### 1. Install
 
 You can install package by the conmand below
 
@@ -29,7 +29,7 @@ npm install @juicy-plus/react-juicy-modal
 
 you can also use other package managers such as yarn, pnpm
 
-### 1. Use ModalRoot at the root.
+### 2. Use ModalRoot at the root.
 
 Use the component `ModalRoot` where the modal will actually be rendered.(Mostly would be at the root of your app)
 
@@ -52,7 +52,7 @@ const App = () => {
 }
 ```
 
-### 2. Use JuicyModal to decalre modal.
+### 3. Use JuicyModal to decalre modal.
 
 You can use `JuicyModal`, `openModal`, `closeModal`, etc. in the part where modal content is declared.
 
@@ -92,7 +92,7 @@ const About = () => {
 }
 ```
 
-### Example
+### 4. Example
 
 You can run example by the command below, or just look at the source codes in the directory `exmaple`,
 
@@ -101,7 +101,7 @@ yarn
 yarn example
 ```
 
-### run storybook
+### 5. Storybook
 
 try the command below to start storybook
 
@@ -111,13 +111,9 @@ yarn storybook
 
 ## Reporting Bugs and Contributing Code
 
----
-
 - Want to report a bug or request a feature? Please open [an issue](https://github.com/JuicyPlus/react-juicy-modal/issues/new).
 - Want to help us build it? Fork the project, edit in a dev environment and make a pull request. We need your help!
 
 ## License
-
----
 
 The source code for the site is licensed under the MIT license, which you can find in the [MIT-LICENSE.txt file](https://github.com/JuicyPlus/react-juicy-modal/blob/main/LICENSE).

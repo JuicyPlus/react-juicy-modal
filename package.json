@@ -1,6 +1,6 @@
 {
   "name": "@juicy-plus/react-juicy-modal",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "description": "A user-friendly modal library with juicy colors",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
     "build-storybook": "storybook build",
     "lint": "eslint \"{src,test}/**/*.{ts,tsx}\" --quiet --fix -c \".eslintrc.json\"",
     "compile": "rm -rf dist && mkdir dist && tsc",
-    "publish:npm" : "yarn publish --access public"
+    "publish:npm": "yarn publish --access public"
   },
   "babel": {
     "presets": [

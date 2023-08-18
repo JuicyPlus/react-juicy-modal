@@ -1,5 +1,7 @@
 ## Please follow the instructions below.
 
+[한국어](ko/bug_report_ko.md)
+
 - name: Bug Report
 - about: Create a report to help us improve
 - title: '[Bug] '

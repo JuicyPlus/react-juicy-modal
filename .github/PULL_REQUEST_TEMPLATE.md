@@ -1,5 +1,7 @@
 ## Please follow the instructions below.
 
+[한국어](.github/PULL_REQUEST_TEMPLATE.md)
+
 ### Summary of PR Content
 
 Please provide a brief description of the changes made.
@@ -10,8 +12,8 @@ Please specify the related issue number after the # symbol (e.g., #123).
 
 ### Changes Made
 
-Changed item 1
-Changed item 2
+- Changed item 1
+- Changed item 2
 
 ### Additional Notes
 

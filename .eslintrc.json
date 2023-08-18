@@ -22,7 +22,12 @@
     ],
     "rules": {
         "@typescript-eslint/triple-slash-reference": "off",
-        "prettier/prettier": "error"
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ]
     },
     "settings": {
         "react": {

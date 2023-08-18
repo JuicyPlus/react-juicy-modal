@@ -63,4 +63,5 @@ Consider the need for development and hotfix branches later.
 ### 🍇 Suggestions
 
 The team's `contribution guide` might not be perfect yet.
+
 Please feel free to suggest improvements via ISSUES :)

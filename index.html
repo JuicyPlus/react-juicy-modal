@@ -23,7 +23,7 @@
 {"@context":"https://schema.org","@type":"WebSite","description":"A juicy modal component for react.js","headline":"react-juicy-modal","name":"react-juicy-modal","url":"https://juicyplus.github.io/react-juicy-modal/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/react-juicy-modal/assets/css/style.css?v=597911ec3c898f6dfcd85d889c7733068c6a9678">
+    <link rel="stylesheet" href="/react-juicy-modal/assets/css/style.css?v=e4368e75c7a603a814209a6bce4d9ddf7662777c">
     <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 
 <!-- Setup Google Analytics -->
@@ -39,51 +39,123 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       
-      <h1><a href="https://juicyplus.github.io/react-juicy-modal/">react-juicy-modal</a></h1>
-      
 
-      <div align="center">
-<img src="logo.png" width="150px" height="150px" title="Github_Logo" />
+      <h1 id="react-juicy-modal">react-juicy-modal</h1>
+
+<div align="center">
+  <img src="logo.png" width="150px" height="150px" alt="logo of Juicy Plus" />
 </div>
 
 <p>Introducing React-Juicy-Modal: Ushering in a new era of modal interactions in React applications with fresh, fruity designs 🍊🍇🍓</p>
 
+<p><em>Demonstration:</em></p>
+
 <div align="center">
-  <img src="demo.gif" width="500px" height="300px" />
+  <img src="demo.gif" width="450px" height="244px" alt="demonstration of react-juicy-modal" />
 </div>
 <p><br /><br /></p>
 
-<p>Features:</p>
+<p><em>Features:</em></p>
 
 <p>🌟 Fruity Fresh Design: Say farewell to dull, generic modal designs. React Juicy Modal brings you a wide array of visually captivating modal styles inspired by the vibrant world of fruits. From zesty oranges to luscious grapes, each modal variant breathes life into your user interactions.</p>
 
-<h3 id="getting-started">Getting Started</h3>
+<h2 id="-getting-started">🚀 Getting Started</h2>
 
-<hr />
+<h3 id="1-install">1. Install</h3>
 
-<p>This project is not published yet but you can try by cloning this repository in local</p>
+<p>You can install package by the conmand below.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn
-yarn start
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> @juicy-plus/react-juicy-modal
 </code></pre></div></div>
 
-<p>try the command below to start storybook</p>
+<p>You can also use other package managers such as yarn, pnpm</p>
+
+<h3 id="2-use-modalroot-at-the-root">2. Use ModalRoot at the root.</h3>
+
+<p><code class="language-plaintext highlighter-rouge">ModalRoot</code> is the component where the modal will actually be rendered.(Mostly it would be at the root of your app)</p>
+
+<p>Modal and <code class="language-plaintext highlighter-rouge">ModalRoot</code> must be originated from <code class="language-plaintext highlighter-rouge">useJuicyModal</code> with the same <code class="language-plaintext highlighter-rouge">rootId</code>.</p>
+
+<p>Then the modal from any component in the app, it will be rendered in the <code class="language-plaintext highlighter-rouge">ModalRoot</code>.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useJuicyModal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@juicy-plus/react-juicy-modal</span><span class="dl">'</span>
+
+<span class="kd">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">ModalRoot</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useJuicyModal</span><span class="p">({</span> <span class="na">rootId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">modal-root</span><span class="dl">'</span> <span class="p">})</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="p">...</span>
+      <span class="o">&lt;</span><span class="nx">ModalRoot</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="3-use-juicymodal-to-decalre-modal">3. Use JuicyModal to decalre modal.</h3>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">JuicyModal</code>, <code class="language-plaintext highlighter-rouge">openModal</code>, <code class="language-plaintext highlighter-rouge">closeModal</code>, etc. in the part where modal content is declared.</p>
+
+<p>There must be a <code class="language-plaintext highlighter-rouge">ModalRoot</code> with matching rootId in the app.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">useJuicyModal</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@juicy-plus/react-juicy-modal</span><span class="dl">'</span>
+
+<span class="kd">const</span> <span class="nx">About</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span> <span class="nx">JuicyModal</span><span class="p">,</span> <span class="nx">closeModal</span><span class="p">,</span> <span class="nx">openModal</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useJuicyModal</span><span class="p">({</span>
+    <span class="na">rootId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">modal-root</span><span class="dl">'</span>
+  <span class="p">})</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="dl">"</span><span class="s2">About</span><span class="dl">"</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">openModal</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Open</span> <span class="nx">Modal</span><span class="o">&lt;</span><span class="sr">/button</span><span class="err">&gt;
+</span>      <span class="o">&lt;</span><span class="nx">JuicyModal</span>
+        <span class="nx">title</span><span class="o">=</span><span class="dl">"</span><span class="s2">Title</span><span class="dl">"</span>
+        <span class="nx">content</span><span class="o">=</span><span class="dl">"</span><span class="s2">Modal from About</span><span class="dl">"</span>
+        <span class="nx">buttons</span><span class="o">=</span><span class="p">{[</span>
+          <span class="p">{</span>
+            <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Confirm</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">onClick</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+              <span class="nx">closeModal</span><span class="p">()</span>
+              <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">confirm</span><span class="dl">'</span><span class="p">)</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="na">label</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Close</span><span class="dl">'</span><span class="p">,</span>
+            <span class="na">onClick</span><span class="p">:</span> <span class="nx">closeModal</span>
+          <span class="p">}</span>
+        <span class="p">]}</span>
+      <span class="sr">/</span><span class="err">&gt;
+</span>    <span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span>  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="4-example">4. Example</h3>
+
+<p>You can run example by the command below, or just look at the source codes in the directory <code class="language-plaintext highlighter-rouge">exmaple</code>.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn
+yarn example
+</code></pre></div></div>
+
+<h3 id="5-storybook">5. Storybook</h3>
+
+<p>Visit our published storybook page <a href="https://juicyplus.github.io/react-juicy-modal/storybook">here</a>.</p>
+
+<p>You can also run the command below to start storybook in local.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn storybook
 </code></pre></div></div>
 
-<h3 id="reporting-bugs-and-contributing-code">Reporting Bugs and Contributing Code</h3>
-
-<hr />
+<h2 id="reporting-bugs-and-contributing-code">Reporting Bugs and Contributing Code</h2>
 
 <ul>
   <li>Want to report a bug or request a feature? Please open <a href="https://github.com/JuicyPlus/react-juicy-modal/issues/new">an issue</a>.</li>
   <li>Want to help us build it? Fork the project, edit in a dev environment and make a pull request. We need your help!</li>
 </ul>
 
-<h3 id="license">License</h3>
-
-<hr />
+<h2 id="license">License</h2>
 
 <p>The source code for the site is licensed under the MIT license, which you can find in the <a href="https://github.com/JuicyPlus/react-juicy-modal/blob/main/LICENSE">MIT-LICENSE.txt file</a>.</p>
 

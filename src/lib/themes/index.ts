@@ -1,4 +1,18 @@
-const theme = {
+export type ThemeName = keyof typeof themes
+
+export interface Theme {
+  primary: string
+  secondary: string
+  grey: string
+  light: string
+  dark: string
+  white: string
+}
+
+// ThemesType is type which has string key and value is type 'Theme'
+type ThemesType = Record<string, Theme>
+
+const themes: ThemesType = {
   orange: {
     primary: '#F0B153',
     secondary: '#5CAD6E',
@@ -25,4 +39,4 @@ const theme = {
   }
 }
 
-export default theme
+export default themes

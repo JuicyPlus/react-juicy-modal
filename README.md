@@ -103,7 +103,9 @@ yarn example
 
 ### 5. Storybook
 
-Try the command below to start storybook.
+Visit our published storybook page [here](https://juicyplus.github.io/react-juicy-modal/storybook).
+
+You can also run the command below to start storybook in local.
 
 ```bash
 yarn storybook
